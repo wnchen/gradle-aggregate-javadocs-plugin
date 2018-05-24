@@ -30,7 +30,6 @@ class NebulaAggregateJavadocPlugin implements Plugin<Project> {
 
     private Set<Project> getJavaSubprojects(Project rootProject) {
         rootProject.subprojects.findAll { subproject ->
-            subproject.plugins.hasPlugin(JavaPlugin) || subproject.plugins.findPlugin("com.android.library") ||
-            subproject.plugins.findPlugin("com.android.application")}
+            subproject.plugins.hasPlugin(JavaPlugin) || subproject.plugins.findPlugin("com.android.library")}
     }
 }
